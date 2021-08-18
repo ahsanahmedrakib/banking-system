@@ -44,6 +44,9 @@ document.getElementById('deposit-button').addEventListener('click', function(){
         updateAmount('deposit-total', inputAmount);
         updateBalance(inputAmount, true);
     }
+    else{
+        alert('Deposit amount should postitve number');
+    }
 
 })
 
@@ -53,6 +56,9 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     if(inputAmount > 0 && balance > 0){
         updateAmount('withdraw-total', inputAmount);
         updateBalance(inputAmount, false);
+    }
+    else{
+        alert('Withdraw amount postitve number and have balance');
     }
 
 })
